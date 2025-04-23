@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actuator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="module">
+            <h1>Actuator</h1>
+            <div id="imageContainer"></div>
+            <div id="quizContainer" style="display:none;">
+                <h2>Final Quiz</h2>
+                <form id="quizForm"><div class="question"><p>1. What's the first step when troubleshooting actuators?</p><label><input type="radio" name="q1" value="a"> Replace it</label><br><label><input type="radio" name="q1" value="b"> ✅Check cables and connections</label><br><label><input type="radio" name="q1" value="c"> Run visual diagnostics</label><br></div><div class="question"><p>2. Home switch LED should be ON when?</p><label><input type="radio" name="q2" value="a"> Actuator fully extended</label><br><label><input type="radio" name="q2" value="b"> ✅System settled and powered</label><br><label><input type="radio" name="q2" value="c"> Power off</label><br></div><div class="question"><p>3. Max torque for power cable nuts?</p><label><input type="radio" name="q3" value="a"> 200 in.lbs</label><br><label><input type="radio" name="q3" value="b"> ✅125 in.lbs</label><br><label><input type="radio" name="q3" value="c"> 50 in.lbs</label><br></div><div class="question"><p>4. Phase-to-phase resistance should be?</p><label><input type="radio" name="q4" value="a"> Over 10 ohm</label><br><label><input type="radio" name="q4" value="b"> ✅< 1 ohm</label><br><label><input type="radio" name="q4" value="c"> Exactly 3 ohm</label><br></div><div class="question"><p>5. Phase-to-ground resistance should be?</p><label><input type="radio" name="q5" value="a"> < 1 MOhm</label><br><label><input type="radio" name="q5" value="b"> ✅> 1 MOhm</label><br><label><input type="radio" name="q5" value="c"> 10 ohm</label><br></div><div class="question"><p>6. What value should commutation offset be?</p><label><input type="radio" name="q6" value="a"> 5.0</label><br><label><input type="radio" name="q6" value="b"> ✅0</label><br><label><input type="radio" name="q6" value="c"> 1.0</label><br></div><div class="question"><p>7. What's a sign of wiring damage?</p><label><input type="radio" name="q7" value="a"> ✅Burn marks or corrosion</label><br><label><input type="radio" name="q7" value="b"> Green indicator</label><br><label><input type="radio" name="q7" value="c"> Noise from motor</label><br></div><div class="question"><p>8. What should be avoided when handling motor lugs?</p><label><input type="radio" name="q8" value="a"> ✅Air tools and tight bends</label><br><label><input type="radio" name="q8" value="b"> Labeling</label><br><label><input type="radio" name="q8" value="c"> Torque spec check</label><br></div><div class="question"><p>9. What confirms an actuator fault?</p><label><input type="radio" name="q9" value="a"> ✅Fault follows actuator</label><br><label><input type="radio" name="q9" value="b"> Fault disappears</label><br><label><input type="radio" name="q9" value="c"> No sound</label><br></div><div class="question"><p>10. When should CAE be contacted?</p><label><input type="radio" name="q10" value="a"> ✅When actuator fault is unclear or verified</label><br><label><input type="radio" name="q10" value="b"> At startup</label><br><label><input type="radio" name="q10" value="c"> After reboot</label><br></div>
+                    <button type="button" onclick="submitQuiz()">Submit Answers</button>
+                    <div id="quizResult" style="margin-top:20px; font-weight:bold;"></div>
+                </form>
+            </div>
+            <div class="navigation">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
