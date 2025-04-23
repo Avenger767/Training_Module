@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select a Training Module</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="userNameDisplay"></span></h1>
+        <h2>Select a Training Module</h2>
+        <div class="category">
+            <h3>Motion</h3>
+            <ul>
+                <li><a href="CSA_Module/index.html">CSA Drives</a></li>
+                <li><a href="#">24V Power</a></li>
+                <li><a href="#">Actuator</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <h3>Interface</h3>
+            <ul>
+                <li><a href="#">MPIC Basics</a></li>
+                <li><a href="#">Control Panel</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <h3>Visual</h3>
+            <ul>
+                <li><a href="#">Projector Alignment</a></li>
+                <li><a href="#">IG Troubleshooting</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById("userNameDisplay").textContent = localStorage.getItem("userName") || "Technician";
+    </script>
+</body>
+</html>

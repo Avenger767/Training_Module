@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSA Drive Troubleshooting Module</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="module">
+            <h1>CSA Drive Troubleshooting</h1>
+            <div id="imageContainer"></div>
+<div id="quizContainer" style="display:none;">
+    <h2>CSA Drive Troubleshooting Quiz</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. What should be checked first when troubleshooting a CSA Drive fault?</p>
+            <label><input type="radio" name="q1" value="a"> Replace the drive immediately</label><br>
+            <label><input type="radio" name="q1" value="b"> Check the circuit breakers and fault codes</label><br>
+            <label><input type="radio" name="q1" value="c"> Swap all actuator cables</label>
+        </div>
+        <div class="question">
+            <p>2. What indicates a tripped circuit breaker?</p>
+            <label><input type="radio" name="q2" value="a"> A red indicator light</label><br>
+            <label><input type="radio" name="q2" value="b"> A white 'OFF' label in the green window</label><br>
+            <label><input type="radio" name="q2" value="c"> The EtherCAT LED is blinking</label>
+        </div>
+        <div class="question">
+            <p>3. When can encoder cables be swapped safely?</p>
+            <label><input type="radio" name="q3" value="a"> Only with system power on</label><br>
+            <label><input type="radio" name="q3" value="b"> Any time during troubleshooting</label><br>
+            <label><input type="radio" name="q3" value="c"> Only when the system is powered down</label>
+        </div>
+        <div class="question">
+            <p>4. What does it mean if a fault follows the actuator after a cable swap?</p>
+            <label><input type="radio" name="q4" value="a"> The actuator is likely faulty</label><br>
+            <label><input type="radio" name="q4" value="b"> The EtherCAT chain is damaged</label><br>
+            <label><input type="radio" name="q4" value="c"> The drive is definitely bad</label>
+        </div>
+        <div class="question">
+            <p>5. What document contains the Control Head Replacement steps?</p>
+            <label><input type="radio" name="q5" value="a"> CDS46007</label><br>
+            <label><input type="radio" name="q5" value="b"> CDS46008</label><br>
+            <label><input type="radio" name="q5" value="c"> CDS7324</label>
+        </div>
+        <div class="question">
+            <p>6. What should the commutation offset value be?</p>
+            <label><input type="radio" name="q6" value="a"> 1.0</label><br>
+            <label><input type="radio" name="q6" value="b"> 0.0</label><br>
+            <label><input type="radio" name="q6" value="c"> 5.0</label>
+        </div>
+        <div class="question">
+            <p>7. What color is the CSA Drive Status Indicator if a fault is present?</p>
+            <label><input type="radio" name="q7" value="a"> Green</label><br>
+            <label><input type="radio" name="q7" value="b"> It displays U or F followed by fault numbers</label><br>
+            <label><input type="radio" name="q7" value="c"> Blue</label>
+        </div>
+        <div class="question">
+            <p>8. How should actuator cable nuts be removed?</p>
+            <label><input type="radio" name="q8" value="a"> With air tools</label><br>
+            <label><input type="radio" name="q8" value="b"> Using hand tools only</label><br>
+            <label><input type="radio" name="q8" value="c"> With a hammer</label>
+        </div>
+        <div class="question">
+            <p>9. Which LED should never flash on CSA Drive F during normal operation?</p>
+            <label><input type="radio" name="q9" value="a"> ACT1</label><br>
+            <label><input type="radio" name="q9" value="b"> RUN</label><br>
+            <label><input type="radio" name="q9" value="c"> LINK ACT0</label>
+        </div>
+        <div class="question">
+            <p>10. If all troubleshooting steps fail, what should you do?</p>
+            <label><input type="radio" name="q10" value="a"> Contact CAE Support</label><br>
+            <label><input type="radio" name="q10" value="b"> Try again randomly</label><br>
+            <label><input type="radio" name="q10" value="c"> Replace all actuators</label>
+        </div>
+        <button type="button" onclick="submitQuiz()">Submit Answers</button>
+        <div id="quizResult" style="margin-top:20px; font-weight:bold;"></div>
+    </form>
+</div>
+
+            <div class="navigation">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
